@@ -122,9 +122,9 @@
 }
 
 .menu-btn {
+  display: none;
   width: 60px;
   height: 60px;
-  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -252,9 +252,11 @@
 }
 
 .surf-box {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  &__wrapper {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   &__inner {
     min-height: 750px;
     background: rgba(#1C2121, 0.75);
@@ -370,6 +372,7 @@
   height: 22px;
   background-color: $green;
   border-radius: 50%;
+  box-shadow: 0 0 35px rgba(74, 246, 205, 0.837777);
 }
 .slider-dots__content {
   display: none;
