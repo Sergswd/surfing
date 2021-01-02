@@ -10,7 +10,7 @@ let gulp = require('gulp'),
 
 gulp.task('clean', async function(){
   del.sync('dist')
-})
+});
 
 gulp.task('scss', function(){
   return gulp.src('app/scss/**/*.scss')
@@ -20,7 +20,7 @@ gulp.task('scss', function(){
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('css', function(){
@@ -31,27 +31,28 @@ gulp.task('css', function(){
   ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('html', function(){
   return gulp.src('app/*.html')
-  .pipe(browserSync.reload({stream: true}))
+  .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('script', function(){
   return gulp.src('app/js/*.js')
-  .pipe(browserSync.reload({stream: true}))
+  .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('js', function(){
   return gulp.src([
-    'node_modules/slick-carousel/slick/slick.js'
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/wow.js/dist/wow.js' 
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('browser-sync', function() {

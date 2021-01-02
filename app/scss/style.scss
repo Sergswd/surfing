@@ -381,6 +381,7 @@
   position: absolute;
   top: -48px;
   left: 29px;
+  z-index: 1;
   &::before {
     content: '';
     position: absolute;

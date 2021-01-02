@@ -1,4 +1,5 @@
 $(function(){
+  new WOW().init();
 
   $('.header__slider').slick({
     infinite: true,
@@ -147,4 +148,6 @@ $(function(){
     $('.menu').toggleClass('active');
   });
 
+
+  
 });
